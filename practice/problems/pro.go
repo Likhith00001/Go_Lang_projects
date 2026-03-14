@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt" //https://github.com/Chandands1/Go_100_Projects.git
+	"unicode"
 )
 
 func hello() {
@@ -173,6 +174,11 @@ func linearSearch() {
 		}
 	}
 	fmt.Println(found)
+	for i,_:= range arr{
+		if arr[i]>arr[i+1]{
+			arr[i],arr[i+1]
+		} 
+	}
 }
 
 func main() {
@@ -194,4 +200,5 @@ func main() {
 	//fmt.Println(revSum(647))
 	//readarr()
 	linearSearch()
+	  
 }

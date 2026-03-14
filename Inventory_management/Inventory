@@ -1,0 +1,15 @@
+package main
+
+import (
+	"fmt"
+)
+
+func startInventory(n) {
+	fmt.Println("Welcome %s for this Inventory Manegment", n)
+
+}
+func main() {
+	fmt.Println("enter your name")
+	fmt.Scanln(&name)
+	startInventory(name)
+}
