@@ -64,3 +64,80 @@ func AssinData(jsn *Jstruct) {
 func main() {
 	startJSON()
 }
+
+//REal developer style of writing
+// package main
+
+// import (
+// 	"encoding/json"
+// 	"fmt"
+// )
+
+// type Student struct {
+// 	ID    string  `json:"id"`
+// 	Name  string  `json:"name"`
+// 	Total float64 `json:"total"`
+// }
+
+// func assignData() Student {
+// 	var s Student
+
+// 	fmt.Print("Enter your name: ")
+// 	fmt.Scanln(&s.Name)
+
+// 	fmt.Print("Enter your student id: ")
+// 	fmt.Scanln(&s.ID)
+
+// 	fmt.Print("Enter total marks: ")
+// 	fmt.Scanln(&s.Total)
+
+// 	return s
+// }
+
+// func convertToJSON(s Student) ([]byte, error) {
+// 	fmt.Println("\nStruct Data:")
+// 	fmt.Println(s.Name, s.ID, s.Total)
+
+// 	jsonData, err := json.Marshal(s)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+
+// 	fmt.Println("\nJSON Format:")
+// 	fmt.Println(string(jsonData))
+
+// 	return jsonData, nil
+// }
+
+// func convertToStruct(data []byte) (Student, error) {
+// 	var s Student
+
+// 	err := json.Unmarshal(data, &s)
+// 	if err != nil {
+// 		return s, err
+// 	}
+
+// 	return s, nil
+// }
+
+// func main() {
+
+// 	fmt.Println("Welcome to JSON Conversion Program")
+
+// 	student := assignData()
+
+// 	jsonData, err := convertToJSON(student)
+// 	if err != nil {
+// 		fmt.Println("Error:", err)
+// 		return
+// 	}
+
+// 	newStudent, err := convertToStruct(jsonData)
+// 	if err != nil {
+// 		fmt.Println("Error:", err)
+// 		return
+// 	}
+
+// 	fmt.Println("\nConverted Back To Struct:")
+// 	fmt.Println(newStudent.Name, newStudent.ID, newStudent.Total)
+// }

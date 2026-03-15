@@ -39,7 +39,7 @@ func CreateMarks(s1 *Student, num int) {
 		fmt.Scanln(&s1.marks.S_name, &s1.marks.mark)
 		if s1.marks.mark > 100 || s1.marks.mark < 0 {
 			fmt.Println("wrong marks entered")
-			s1.marks = nul
+			//s1.marks = 0
 			CreateMarks(s1, num)
 		}
 	}
@@ -51,12 +51,12 @@ func TotalMarks(s1 *Student, num int) {
 		Total += s1.marks.mark
 	}
 	s1.total = Total
-	return
+
 }
 
 func AverageMarks(s1 *Student, num int) {
 	s1.average = s1.total / float64(num)
-	return
+
 }
 
 func Grade(s1 *Student) {
